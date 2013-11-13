@@ -24,9 +24,13 @@ Things you may want to cover:
 * ...
 
 
-Please feel free to use a different markup language if you do not plan to run
+Please feel free to use a different markup language (besides rdoc) if you do not plan to run
 <tt>rake doc:app</tt>.
 
 
-== ToDo:
-
+== ToDo: 
+	- Set up git for version control
+	- Destroy Users model
+	- Set up simple user authentication (Railscast #250)
+	- Install Git on (mt) DV, remove project from github
+	- Add user roles & permissions
