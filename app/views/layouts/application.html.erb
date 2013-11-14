@@ -8,8 +8,17 @@
 </head>
 <body>
 
-<div id+"user_header">
-	<%= link_to "New User", new_user_path %>
+<div id="user_header">
+	<% if current_user %>
+		Logged in as <%= current_user.username %>
+		<%= link_to "Log Out", logout_path %>  
+		<!-- routes allow logout_path to replace: #session_path("current"), method: "delete" -->
+		<!-- The delete method is not used.  The default 'get' is used instead. -->
+
+	<% else %>
+		<%= link_to "Log In", signup_path %> | <!-- signup_path replaces new_session_path -->
+		<%= link_to "New User", login_path %> <!-- login_path replaces new_user_path -->
+	<% end %>
 </div>
 
 <%= yield %>

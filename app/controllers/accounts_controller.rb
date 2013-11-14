@@ -1,6 +1,8 @@
 class AccountsController < ApplicationController
 	#http_basic_authenticate_with name: "defect", password: "secret", only: :destroy
 	
+	before_filter :authorize, only: [:index, :new, :create, :edit, :update, :destroy]
+
 	def index
 		@accounts = Account.all
 	end
