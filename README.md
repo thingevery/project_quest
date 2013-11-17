@@ -29,8 +29,13 @@ Please feel free to use a different markup language (besides rdoc) if you do not
 
 
 == ToDo: 
-	- Set up git for version control
-	- Destroy Users model
-	- Set up simple user authentication (Railscast #250)
-	- Install Git on (mt) DV, remove project from github
+	√ Set up git for version control
+	√ Destroy Users model
+	√ Set up simple user authentication (Railscast #250)
+	√ Store login status in cookie with option at login
+	- Add password recovery via email
 	- Add user roles & permissions
+
+	- Install Git on (mt) DV
+	- Remove project from github
+	
