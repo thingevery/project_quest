@@ -3,13 +3,13 @@
 <table>
 	<tr>
 		<th>Name</th>
-		<th>Job Title</th>
+		<th>Email</th>
 	</tr>
 
 	<% @users.each do |user| %>
 		<tr>
-			<td><%= user.name %></td>
-			<td><%= user.job_title %></td>
+			<td><%= user.username %></td>
+			<td><%= user.email %></td>
 			<td><%= link_to 'Show', user_path(user) %></td>
 			<td><%= link_to 'Edit', edit_user_path(user) %></td>
 			<td><%= link_to 'Destroy', user_path(user), 

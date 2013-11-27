@@ -9,7 +9,12 @@ class ApplicationController < ActionController::Base
 
   private
   	def current_user
-  		@current_user ||= User.find(session[:user_id]) if session[:user_id]
+  		#@current_user ||= User.find(session[:user_id]) if session[:user_id]
+      @current_user ||= User.find_by_auth_token(cookies[:auth_token]) if cookies[:auth_token]
+
+      #rescue ActiveRecord::RecordNotFound # Not sure this is needed. I added this
+      #  @current_user = nil               # while troubleshooting a different 
+      #  cookies.delete(:auth_token)       # problem and this wasn't the solution.
   	end
   	helper_method :current_user
 end

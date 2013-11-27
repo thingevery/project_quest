@@ -1,4 +1,5 @@
 ProjectQuest::Application.routes.draw do
+  get "password_resets/new"
   #get "sessions/new"
 
   get "welcome/index"
@@ -10,7 +11,7 @@ ProjectQuest::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
-  resources :sessions, :users, :accounts
+  resources :users, :sessions, :password_resets, :accounts
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

@@ -16,10 +16,20 @@
 		<!-- The delete method is not used.  The default 'get' is used instead. -->
 
 	<% else %>
-		<%= link_to "Log In", signup_path %> | <!-- signup_path replaces new_session_path -->
-		<%= link_to "New User", login_path %> <!-- login_path replaces new_user_path -->
+		<%= link_to "Log In", login_path %> | <!-- login_path replaces new_user_path -->
+		<%= link_to "New User", signup_path %> <!-- signup_path replaces new_session_path -->
 	<% end %>
 </div>
+
+<!-- render flash notice and alert messages 
+	 unless they have been already -->
+<% unless @messages_rendered %>
+	<%- flash.each do |k, v| %>
+	    <div class="<%= k %>"><%= v %></div>
+	<% end %> 
+	<% @messages_rendered = true %>
+<% end %>
+
 
 <%= yield %>
 
