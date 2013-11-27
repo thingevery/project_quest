@@ -33,8 +33,10 @@ Please feel free to use a different markup language (besides rdoc) if you do not
 	√ Destroy Users model
 	√ Set up simple user authentication (Railscast #250)
 	√ Store login status in cookie with option at login
-	- Add password recovery via email
-	- Add user roles & permissions
+	√ Send emails from ActionMailer
+	- User registration confirmation via email
+	- Password recovery via email
+	- User roles & permissions
 
 	- Install Git on (mt) DV
 	- Remove project from github
